@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <div class="center-container">
+      <img src="./KBL_logo.png" alt="Centered Image" class="centered-image">
+    </div>
+    
+</head>
+<body>
+    <header>
+        <h1>KBL Game Information</h1>
+    </header>
+
+    
+    <main>
+        <section id="game-form">
+            <h2>Enter KBL Game Information</h2>
+            <form id="addGameForm">
+                <label for="team1">Team 1:</label>
+                <input type="text" id="team1" name="team1" required>
+
+                <label for="team2">Team 2:</label>
+                <input type="text" id="team2" name="team2" required>
+
+                <label for="date">Date:</label>
+                <input type="datetime-local" id="date" name="date" required>
+
+                <label for="venue">Venue:</label>
+                <input type="text" id="venue" name="venue" required>
+
+                <label for="score">Score:</label>
+                <input type="text" id="score" name="score">
+
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="filter-section">
+            <h2>Filter by Date</h2>
+            <label for="date-input">Select Date:</label>
+            <input type="date" id="date-input">
+        </section>
+
+        <section id="game-list">
+            <!-- 게임 목록은 동적으로 채워짐 -->
+        </section>
+    </main>
+
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  .centered-image {
+    max-width: 100%; 
+    max-height: 100%; 
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #260de3,#ddd,#e37f0d, #e73f2f);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 1em;
+}
+
+form {
+    display: grid;
+    gap: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 0.5em;
+}
+
+label {
+    display: block;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
