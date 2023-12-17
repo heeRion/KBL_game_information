@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>KBL Game Sheet</title>
+</head>
+<body>
+    <h1>KBL Game Sheet</h1>
+    <form action="/submit" method="post">
+        <label for="score">Score:</label>
+        <input type="text" id="score" name="score" required>
+
+        <label for="team">Team:</label>
+        <input type="text" id="team" name="team" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <label for="month">Month:</label>
+        <select id="month" name="month" required>
+            <% months.forEach(month => { %>
+                <option value="<%= month %>"><%= month %></option>
+            <% }); %>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="gameResults">
+        <h2>Game Results</h2>
+        <% gameResults.forEach(result => { %>
+            <div class="result">
+                <p><strong>Score:</strong> <%= result.score %></p>
+                <p><strong>Team:</strong> <%= result.team %></p>
+                <p><strong>Location:</strong> <%= result.location %></p>
+                <p><strong>Comments:</strong> <%= result.comments %></p>
+                <p><strong>Month:</strong> <%= result.month %></p>
+            </div>
+        <% }); %>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+#gameResults {
+    margin-top: 20px;
+}
+
+.result {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
